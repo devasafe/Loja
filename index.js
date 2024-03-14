@@ -77,7 +77,7 @@ try {
     await connection.connect(); // Use .connect() para conectar
     console.log('Conectado ao MySQL!');
 } catch (err) {
-    console.error('Erro ao conectar ao MySQL:', err);
+    console.error('xundaErro ao conectar ao MySQL:', err);
 }
 
 // Array para armazenar os produtos
