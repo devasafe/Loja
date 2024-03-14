@@ -1,0 +1,131 @@
+/* produtos.css */
+
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(247, 247, 247);
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#title h1 {
+    margin: 0;  
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+ul a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid rgb(247, 247, 247);
+    padding: 20px;
+    text-align: center;
+    width: 30%; /* Ajuste conforme necessário para o seu layout */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.product img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+.product h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #000;
+}
+
+.product p {
+    color: #666;
+}
+
+.product button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #333;
+}
+
+.back {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    margin-top: auto;
+    text-decoration: none; /* Removendo sublinhado do link */
+    display: inline-block; /* Para que as propriedades funcionem corretamente */
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 31px;
+}
+
+#title img {
+    width: 100px;
+    height: 100px;
+}
+
+.logo {
+    position: relative;
+    top: 15px; /* Ajuste conforme necessário */
+    left: 110px; /* Ajuste conforme necessário */
+    width: 2px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+.weed1 {
+    position: relative;
+    top: 15px; /* Ajuste conforme necessário */
+    left: -960px; /* Ajuste conforme necessário */
+    width: 2px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+.weed2 {
+    position: relative;
+    top: 15px; /* Ajuste conforme necessário */
+    left: 850px; /* Ajuste conforme necessário */
+    width: 2px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
+}

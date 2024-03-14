@@ -1,0 +1,202 @@
+/*style.css*/
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(247, 247, 247);
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#title h1 {
+    margin: 0;  
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+ul a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+#featured-products {
+    display: flex;
+    overflow-x: auto; /* Alterado para permitir rolagem horizontal */
+    overflow-y: hidden; /* Removido overflow-y para desativar a rolagem vertical */
+    white-space: nowrap;
+    cursor: grab;
+    margin: 0;
+    padding:20px;
+    border: 0px solid #ccc;
+    padding-bottom: 20px; /* Adicionado para dar espaço aos botões de rolagem */
+    
+}
+.scroll-button {
+    position: fixed;
+    top: 50%;
+    width: 30px;
+    background-color: #ebebeb;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.scroll-button:hover {
+    opacity: 1;
+}
+.left-button,
+.right-button {
+    height: 100px;
+    width: 150px;
+    background-color: #ebebeb;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.left-button {
+    left: 0px; /* Ajuste para um espaçamento pequeno da borda esquerda */
+    height: 100px;
+    width: 150px;
+    background-color: #ebebeb;
+
+}
+
+.rgt{
+    background-color: pink;
+}
+
+.right-button {
+    right: 0px; /* Ajuste para um espaçamento pequeno da borda direita */
+    height: 100px;
+    width: 150px;
+    background-color: #ebebeb;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid rgb(247, 247, 247);
+    padding: 200px;
+    text-align: center;
+    width: 80vw; /* Alterado para ocupar 80% da largura da tela */
+    height: 600px;
+    box-sizing: border-box;
+    margin-right: 1px; /* Espaçamento entre os blocos */
+}
+
+@media (min-width: 7068px) {
+    #featured-products {
+        max-width: 10500px;
+        margin: 0 auto;
+    }
+}
+
+.product img {
+    
+    height: 200px;
+    width: 200px;
+}
+
+.product h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.product p {
+    color: #000000;
+}
+
+.back {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    margin-top: auto;
+    text-decoration: none; /* Removendo sublinhado do link */
+    display: inline-block; /* Para que as propriedades funcionem corretamente */
+
+}
+
+.product-button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    margin-top: auto;
+    text-decoration: none; /* Removendo sublinhado do link */
+    display: inline-block; /* Para que as propriedades funcionem corretamente */
+
+}
+
+
+
+
+.product button:hover {
+    background-color: #000000;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 31px;
+}
+#title img {
+    width: 100px;
+    height: 100px;
+}
+.logo {
+    position: relative;
+    top: 15px; /* Ajuste conforme necessário */
+    left: 110px; /* Ajuste conforme necessário */
+    width: 2px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+
+
+.weed1 {
+    position: relative;
+    top: 15px; /* Ajuste conforme necessário */
+    left: -960px; /* Ajuste conforme necessário */
+    width: 2px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+.weed2 {
+    position: relative;
+    top: 15px; /* Ajuste conforme necessário */
+    left: 850px; /* Ajuste conforme necessário */
+    width: 2px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+
+

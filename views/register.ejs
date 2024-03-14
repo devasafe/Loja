@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sregister.css">
+    <title>GOING - Register</title>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="video.webm" type="video/webm">
+        <!-- Inclua outros formatos de vídeo, se necessário -->
+    </video>
+
+    <div id="login-container">
+        <img class="logo" src="logo.png" alt="ACIDSTORE Logo">
+        <form id="registerForm" onsubmit="return registerUser()">
+
+            <label for="newUsername">New Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <label for="newNumber">New Number:</label>
+            <input type="text" id="newNumber" name="newNumber" pattern="[0-9]{11}" title="11 numbers" required>
+            
+
+            <button type="submit">Register</button>
+            
+        </form>
+        <button type="button" onclick="window.location.href='login.html'">Login</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 GOING. All rights reserved.</p>
+    </footer>
+
+    <script src="register.js"></script>
+</body>
+</html>
+<footer>
+    <p>&copy; 2024 GOING. All rights reserved.</p>
+</footer>

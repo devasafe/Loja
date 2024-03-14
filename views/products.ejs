@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produtos.css">
+
+    <title>GOING</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <img class="logo" src="logo.png" alt="ACIDSTORE logo">
+            <img class="weed2" src="weed.png" alt="ACIDSTORE weed">
+            <img class="weed1" src="weed.png" alt="ACIDSTORE weed">
+        </div>
+        <ul>
+            <a href="/index">Home</a>
+            <a href="/products">Products</a>
+            <a href="/carrinho">Carrinho</a>
+            <a href="/sobre">Sobre</a>
+        </ul>
+    </header>
+
+    <!-- Repetindo a estrutura para cada categoria de produto -->
+    <div class="product">
+        <h2>Tabacaria</h2>
+        <ul>
+            <% products.forEach(product => { %>
+                <li>
+                    <div class="product-info">
+                        <img src="data:image;base64,<%= product.image %>" alt="<%= product.name %>">
+                        <div class="details">
+                            <h3><%= product.name %></h3>
+                            <p><%= product.description %></p>
+                            <p>Preço: <%= product.price %> </p>
+                            <p>Categoria: <%= product.category %> </p>
+                            <button ButtonElement.onclick="addToCart('<%= product.name %>', <%= product.price %>)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    
+    <script>
+        function addToCartAndRedirect(name, price) {
+            // Chame a função para adicionar ao carrinho (pode precisar ajustar dependendo da sua lógica)
+            addToCart(name, price);
+    
+            // Redirecione para a página /carrinho
+            window.location.href = '/carrinho';
+        }
+    </script>
+    <!-- Repita a estrutura acima para outras categorias de produtos -->
+
+    <a href="/index" class="back">Back</a>
+
+    <section class="products">
+        <!-- Se necessário, adicione mais seções de produtos aqui -->
+    </section>
+    
+    <script src="/script.js"></script>
+    <script src="/index.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 GOING. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

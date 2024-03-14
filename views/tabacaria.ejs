@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produtos.css">
+    <title>GOING</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <img class="logo" src="logo.png" alt="ACIDSTORE logo">
+            <img class="weed2" src="weed.png" alt="ACIDSTORE weed">
+            <img class="weed1" src="weed.png" alt="ACIDSTORE weed">
+        </div>
+        <ul>
+            <a href="/index">Home</a>
+            <a href="/products">Products</a>
+            <a href="/carrinho">Carrinho</a>
+            <a href="/sobre">Sobre</a>
+        </ul>
+    </header>
+    <div class="product">
+        <h2>Tabacaria</h2>
+        <ul>
+            <% tabacaria.forEach(product => { %>
+                <li>
+                    <div class="product-info">
+                        <img src="data:image;base64,<%= product.image %>" alt="<%= product.name %>">
+                        <div class="products">
+                            <h3><%= product.name %></h3>
+                            <p><%= product.description %></p>
+                            <p>Preço: <%= product.price %> </p>
+                            <p>Categoria: <%= product.category %> </p>
+                            <button onclick="addToCart('<%= product.name %>',' <%= product.price %>')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    
+    <a href="/index" class="back">Back</a>
+    
+
+    <section class="products">
+    
+    
+
+    </section>
+    <script src="/script.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 GOING. All rights reserved.</p>
+    </footer>
+</body>
+</html>

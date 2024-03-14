@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slogin.css">
+</head>
+<body>
+    <div id="main-container">
+        <video autoplay muted loop id="background-video">
+            <source src="video.webm" type="video/webm">
+            <!-- Adicione outros formatos de vídeo, se necessário -->
+        </video>
+
+        <div id="login-container">
+            <img class="logo" src="logo.png" alt="ACIDSTORE Logo">
+            <form method="post" onsubmit="return loginUser(event)">
+                <label for="login">Username:</label>
+                <input type="text" id="login" name="login" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <button class="rgt" type="button" onclick="window.location.href='register.html'">Create account</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ACIDSTORE. All rights reserved.</p>
+    </footer>
+
+    <script src="login.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+<footer>
+    <p>&copy; 2024 GOING. All rights reserved.</p>
+</footer>

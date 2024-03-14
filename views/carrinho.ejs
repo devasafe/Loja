@@ -1,0 +1,75 @@
+<!-- carrinho.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GOING - Carrinho</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <img class="logo" src="logo.png" alt="ACIDSTORE Logo">
+            <img class="weed2" src="weed.png" alt="ACIDSTORE boca">
+            <img class="weed1" src="weed.png" alt="ACIDSTORE weed">
+        </div>
+        <ul>
+            <a href="/index">Home</a>
+            <a href="/products">Products</a>
+            <a href="/carrinho">Carrinho</a>
+            <a href="/sobre">Sobre</a>
+        </ul>
+    </header>
+
+    <section id="cart">
+        <h2>Carrinho de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço Unitário</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cart.forEach(item => { %>
+                    <tr>
+                        <td><%= item.name %></td>
+                        <td><%= item.quantity %></td>
+                        <td>R$ <%= item.price.toFixed(2) %></td>
+                        <td>R$ <%= (item.price * item.quantity).toFixed(2) %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <p id="total">Total: R$ <%= cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2) %></p>
+
+        <div class="cart-buttons">
+            <button onclick="continueShopping()">Continuar Comprando</button>
+            <button onclick="openPopup()">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('/carrinho')">Continuar Comprando</span>
+            <p>Seu pedido foi adicionado ao carrinho!</p>
+            <button onclick="closePopup('/carrinho')">Ir para o Carrinho</button>
+        </div>
+    </div>
+
+    <a href="/index" class="back">Back</a>
+
+    <footer>
+        <p>&copy; 2024 GOING. All rights reserved.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>
