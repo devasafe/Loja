@@ -88,7 +88,7 @@ app.get('/', (req, res) => {
     res.render('login.ejs');
 });
 
-// Rotas para categorias
+
 // Rota para categorias
 app.get('/tabacaria', (req, res) => {
     const tabacariaProducts = data.products.filter(product => product.category === 'tabacaria');

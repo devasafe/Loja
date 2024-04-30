@@ -70,13 +70,12 @@ app.post('/add_to_cart', (req, res) => {
 
 // Conectar ao banco de dados
 try {
-    await connection.connect(); // Use .connect() para conectar
+    await connection.connect();
     console.log('Conectado ao MySQL!');
 } catch (err) {
     console.error('Erro ao conectar ao MySQL:', err);
 }
 
-// ... (restante do código) ...
 
 // Rota para processar o formulário de cadastro de produto
 app.post('/submit_product', upload.single('productImage'), async (req, res) => {
@@ -110,8 +109,6 @@ app.post('/submit_product', upload.single('productImage'), async (req, res) => {
         res.status(500).send('Erro ao processar upload');
     }
 });
-
-// ... (restante do código) ...
 
 // Iniciando o servidor
 app.listen(port, () => {
